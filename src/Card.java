@@ -1,7 +1,5 @@
 package src;
 
-import java.awt.*;
-import java.util.Arrays;
 
 public class Card
 {
@@ -35,19 +33,15 @@ public class Card
         this.suit = suit;
     }
 
-    public String rankAsString()
-    {
+    public String rankAsString(){
         return ranks[rank];
     }
 
-    public String suitAsString()
-    {
+    public String suitAsString(){
         return suits[suit];
-
     }
 
-    public String printCard()
-    {
+    public String printCard(){
         return rankAsString() + " of " + suitAsString();
     }
 }
