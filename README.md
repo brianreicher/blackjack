@@ -1,2 +1,2 @@
-# texas_holdem
-Multiplayer Texas Hold 'Em Poker, written in Java
+# Blackjack
+Blackjack Casino Game - written in Java
