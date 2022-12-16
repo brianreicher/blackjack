@@ -22,9 +22,14 @@ public class Player {
         }
     }
 
+    public void showPlayer(){
+        System.out.println("Player Name: " + this.name);
+    }
+
     public static void main(String[] args){
         Player p = new Player("Brian");
-        System.out.println("Player Details");
+        System.out.println("Player Details:");
+        p.showPlayer();
         p.showCards();
     }
 }
