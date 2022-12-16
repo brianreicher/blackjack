@@ -48,7 +48,6 @@ public class Card
 
     public String printCard()
     {
-        return rankAsString() + "of" + suitAsString();
-
+        return rankAsString() + " of " + suitAsString();
     }
 }

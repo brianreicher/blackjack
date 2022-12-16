@@ -1,21 +1,30 @@
 package src;
 
+import java.util.Collections;
+import java.util.List;
+import java.util.Arrays;
+
 public class Deck
 {
     static Card[] deck = new Card[52];
-    boolean shuffle;
-
 
     public Deck(boolean shuffle)
     {
-        this.shuffle = shuffle;
-        int count = 0;
+
+        // build deck of cards
+        int index = 0;
         for(short suit=0; suit<4; suit++)
         {
-            for(short card=0; card<13; card++)
+            for(short c=0; c<13; c++)
             {
-                deck[0] = new Card(suit, card);
+                deck[index] = new Card(suit, c);
+                index++;
             }
+        }
+
+        // shuffle deck if desired
+        if(shuffle){
+            shuffleDeck();
         }
     }
 
@@ -28,8 +37,19 @@ public class Deck
         System.out.println("\n");
     }
 
+    public void shuffleDeck(){
+        List<Card> deckList = Arrays.asList(deck);
+
+        // shuffle as a list
+        Collections.shuffle(deckList);
+
+        deck = deckList.toArray(deck);
+    }
+
     public static void main(String[] args)
     {
+        Deck d = new Deck(true);
+        System.out.println("Deck");
         printDeck();
     }
 }
